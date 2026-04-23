@@ -1,0 +1,25 @@
+import random
+letter='a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'
+number='0','1','2','3','4','5','6','7','8','9'
+symbol='#','!','@','$','%','&','*','(',')','+'
+password=[]
+n_letter=input("Enter the no. of letters you want :")
+n_number=input("Enter the no. of numbers you want :")
+n_symbol=input("Enter the no. of symbols you want :")
+for i in range(1,int(n_letter)+1):
+    char=random.choice(letter)
+    password+=char
+for i in range(1,int(n_number)+1):
+    char=random.choice(number)
+    password+=char
+for i in range(1, int(n_symbol) + 1):
+    char =random.choice(symbol)
+    password += char
+#print(password)
+for word in password:
+    random.shuffle(password)
+#print(password)
+random_password=""
+for i in password:
+    random_password+=i
+print(random_password)
